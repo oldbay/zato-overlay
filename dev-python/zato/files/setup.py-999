@@ -1,0 +1,20 @@
+import sys
+from easydev.multisetup import Multisetup
+
+packages = [
+    'zato-agent',
+    'zato-broker',
+    'zato-cli',
+    'zato-client',
+    'zato-common',
+    'zato-cy',
+    'zato-distlock',
+    'zato-scheduler',
+    'zato-server',
+    'zato-web-admin',
+    'zato-zmq',
+]
+
+if __name__ == '__main__':
+    _setup = Multisetup(curdir='.', commands=sys.argv[1:], packages=packages)
+    _setup.run()
