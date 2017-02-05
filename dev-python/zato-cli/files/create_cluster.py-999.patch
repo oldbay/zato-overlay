@@ -1,0 +1,33 @@
+Index: patch/zato/code/zato-cli/src/zato/cli/create_cluster.py
+===================================================================
+--- patch.orig/zato/code/zato-cli/src/zato/cli/create_cluster.py
++++ patch/zato/code/zato-cli/src/zato/cli/create_cluster.py
+@@ -245,6 +245,9 @@ zato_services = {
+     'zato.outgoing.odoo.get-list':'zato.server.service.internal.outgoing.odoo.GetList',
+     'zato.outgoing.odoo.ping':'zato.server.service.internal.outgoing.odoo.Ping',
+ 
++    # Outgoing connections - SQL for Sheduler
++    'zato.outgoing.sql.auto-ping':'zato.server.service.internal.outgoing.sql.AutoPing',
++
+     # Outgoing connections - SQL
+     'zato.outgoing.sql.change-password':'zato.server.service.internal.outgoing.sql.ChangePassword',
+     'zato.outgoing.sql.create':'zato.server.service.internal.outgoing.sql.Create',
+@@ -467,6 +470,18 @@ zato_services = {
+     'zato.service.slow-response.get-list':'zato.server.service.internal.service.GetSlowResponseList',
+     'zato.service.upload-package':'zato.server.service.internal.service.UploadPackage',
+ 
++    # Statistics for Sheduler
++    'zato.stats.process-raw-times':'zato.server.service.internal.stats.ProcessRawTimes',
++    'zato.stats.aggregate-by-minute':'zato.server.service.internal.stats.AggregateByMinute',
++    'zato.stats.aggregate-by-hour':'zato.server.service.internal.stats.AggregateByHour',
++    'zato.stats.aggregate-by-day':'zato.server.service.internal.stats.AggregateByDay',
++    'zato.stats.aggregate-by-month':'zato.server.service.internal.stats.AggregateByMonth',
++    'zato.stats.summary.create-summary-by-day':'zato.server.service.internal.stats.summary.CreateSummaryByDay',
++    'zato.stats.summary.create-summary-by-month':'zato.server.service.internal.stats.summary.CreateSummaryByMonth',
++    'zato.stats.summary.create-summary-by-range':'zato.server.service.internal.stats.summary.CreateSummaryByRange',
++    'zato.stats.summary.create-summary-by-week':'zato.server.service.internal.stats.summary.CreateSummaryByWeek',
++    'zato.stats.summary.create-summary-by-year':'zato.server.service.internal.stats.summary.CreateSummaryByYear',
++
+     # Statistics
+     'zato.stats.delete':'zato.server.service.internal.stats.Delete',
+     'zato.stats.get-by-service':'zato.server.service.internal.stats.GetByService',

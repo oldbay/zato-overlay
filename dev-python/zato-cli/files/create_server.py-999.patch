@@ -1,0 +1,16 @@
+Index: patch/zato/code/zato-cli/src/zato/cli/create_server.py
+===================================================================
+--- patch.orig/zato/code/zato-cli/src/zato/cli/create_server.py
++++ patch/zato/code/zato-cli/src/zato/cli/create_server.py
+@@ -483,8 +483,9 @@ class Create(ZatoCommand):
+         except IntegrityError, e:
+             msg = 'Server name [{}] already exists'.format(args.server_name)
+             if self.verbose:
+-                msg += '. Caught an exception:[{}]'.format(format_exc(e))
+-                self.logger.error(msg)
++                self.logger.debug(e)
++                # msg += '. Caught an exception:[{}]'.format(format_exc(e))
++                # self.logger.error(msg)
+             self.logger.error(msg)
+             session.rollback()
+ 

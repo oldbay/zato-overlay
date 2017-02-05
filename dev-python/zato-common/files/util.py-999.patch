@@ -1,0 +1,25 @@
+Index: patch/zato/code/zato-common/src/zato/common/util.py
+===================================================================
+--- patch.orig/zato/code/zato-common/src/zato/common/util.py
++++ patch/zato/code/zato-common/src/zato/common/util.py
+@@ -585,7 +585,10 @@ def import_module_from_path(file_name, b
+     for suffix in('c', 'o'):
+         path = file_name + suffix
+         if os.path.exists(path):
+-            os.remove(path)
++            try:
++                os.remove(path)
++            except:
++                pass
+ 
+     return ModuleInfo(file_name, imp.load_source(mod_name, file_name))
+ 
+@@ -776,7 +779,7 @@ def dotted_getattr(o, path):
+ # ################################################################################################################################
+ 
+ def get_service_by_name(session, cluster_id, name):
+-    logger.debug('Looking for name:`%s` in cluster_id:`%s`'.format(name, cluster_id))
++    logger.debug('Looking for name:`{}` in cluster_id:`{}`'.format(name, cluster_id))
+     return _service(session, cluster_id).\
+            filter(Service.name==name).\
+            one()

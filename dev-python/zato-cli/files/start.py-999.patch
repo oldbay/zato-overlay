@@ -1,0 +1,15 @@
+Index: patch/zato/code/zato-cli/src/zato/cli/start.py
+===================================================================
+--- patch.orig/zato/code/zato-cli/src/zato/cli/start.py
++++ patch/zato/code/zato-cli/src/zato/cli/start.py
+@@ -130,8 +130,8 @@ Examples:
+             if not found_agent_pidfile:
+                 self.start_component(
+                     'zato.agent.load_balancer.main', 'load-balancer', os.path.join(self.config_dir, 'repo'), stop_haproxy)
+-
+-        sys.exit(self.SYS_ERROR.FOUND_PIDFILE)
++        else:
++            sys.exit(self.SYS_ERROR.FOUND_PIDFILE)
+ 
+     def _on_web_admin(self, *ignored):
+         self.run_check_config()

@@ -1,0 +1,13 @@
+Index: patch/zato/code/zato-common/src/zato/common/__init__.py
+===================================================================
+--- patch.orig/zato/code/zato-common/src/zato/common/__init__.py
++++ patch/zato/code/zato-common/src/zato/common/__init__.py
+@@ -39,7 +39,7 @@ from lxml.objectify import ObjectPath as
+ 
+ try:
+     curdir = os.path.dirname(os.path.abspath(__file__))
+-    _version_py = os.path.normpath(os.path.join(curdir, '..', '..', '..', '..', '.version.py'))
++    _version_py = os.path.normpath(os.path.join(curdir, '.version.py'))
+     _locals = {}
+     execfile(_version_py, _locals)
+     version = 'Zato {}'.format(_locals['version'])

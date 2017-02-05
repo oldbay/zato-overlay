@@ -1,0 +1,22 @@
+Index: pyjwt-1.4.1/setup.py
+===================================================================
+--- pyjwt-1.4.1.orig/setup.py
++++ pyjwt-1.4.1/setup.py
+@@ -35,9 +35,6 @@ tests_require = [
+     'pytest-runner',
+ ]
+ 
+-needs_pytest = set(('pytest', 'test', 'ptr')).intersection(sys.argv)
+-pytest_runner = ['pytest-runner'] if needs_pytest else []
+-
+ setup(
+     name='PyJWT',
+     version=version,
+@@ -65,7 +62,6 @@ setup(
+         'Topic :: Utilities',
+     ],
+     test_suite='tests',
+-    setup_requires=pytest_runner,
+     tests_require=tests_require,
+     extras_require=dict(
+         test=tests_require,
