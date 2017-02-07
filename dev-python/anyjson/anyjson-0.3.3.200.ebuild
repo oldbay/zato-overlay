@@ -8,16 +8,16 @@ PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy )
 
 inherit distutils-r1
 
-REAL_PN="anyjson"
-DESCRIPTION="Wraps the best available JSON implementation available in a common interface"
+REAL_PV="0.3.3"
+DESCRIPTION="ZATO-3 patch. Wraps the best available JSON implementation available in a common interface."
 HOMEPAGE="https://bitbucket.org/runeh/anyjson"
-SRC_URI="mirror://pypi/${PN:0:1}/${REAL_PN}/${REAL_PN}-${PV}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${REAL_PV}.tar.gz"
+S="${WORKDIR}/${PN}-${REAL_PV}"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 ~arm64 x86"
 IUSE="test"
-S="${WORKDIR}/${REAL_PN}-${PV}"
 
 # please keep all supported implementations in 'test?'
 # to make sure the package is used in the widest way
