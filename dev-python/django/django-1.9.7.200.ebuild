@@ -11,7 +11,8 @@ WEBAPP_NO_AUTO_INSTALL="yes"
 inherit bash-completion-r1 distutils-r1 eutils versionator webapp
 
 MY_PN="Django"
-MY_P="${MY_PN}-${PV}"
+REAL_PV=1.9.7
+MY_P="${MY_PN}-${REAL_PV}"
 
 DESCRIPTION="High-level Python web framework"
 HOMEPAGE="http://www.djangoproject.com/ https://pypi.python.org/pypi/Django"

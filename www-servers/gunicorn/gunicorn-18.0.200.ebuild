@@ -7,10 +7,10 @@ PYTHON_COMPAT=( python{2_7,3_4} pypy )
 
 inherit distutils-r1
 
-REAL_PN="gunicorn"
-DESCRIPTION="A WSGI HTTP Server for UNIX"
+REAL_PV="18.0"
+DESCRIPTION="ZATO-3 patch. A WSGI HTTP Server for UNIX"
 HOMEPAGE="http://gunicorn.org https://pypi.python.org/pypi/gunicorn"
-SRC_URI="https://pypi.python.org/packages/source/g/${REAL_PN}/${REAL_PN}-${PV}.tar.gz"
+SRC_URI="https://pypi.python.org/packages/source/g/${REAL_PN}/${PN}-${REAL_PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -24,7 +24,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
 DOCS="README.rst"
-S="${WORKDIR}/${REAL_PN}-${PV}"
+S="${WORKDIR}/${PN}-${REAL_PV}"
 
 python_prepare() {
 	epatch "${FILESDIR}"/arbiter.py.diff 

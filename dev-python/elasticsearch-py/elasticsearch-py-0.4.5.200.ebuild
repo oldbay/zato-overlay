@@ -7,21 +7,22 @@ PYTHON_COMPAT=(python{2_7,3_4})
 
 inherit distutils-r1
 
-REAL_PN="elasticsearch-py"
+DOWN_PN="elasticsearch"
+REAL_PV="0.4.5"
 DESCRIPTION="Python client for Elasticsearch"
 HOMEPAGE=""
-SRC_URI="https://github.com/mozilla/elasticutils/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://pypi.python.org/packages/source/e/${DOWN_PN}/${DOWN_PN}-${REAL_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 # IUSE="debug"
-S="${WORKDIR}/${REAL_PN}-${PV}"
+S="${WORKDIR}/${DOWN_PN}-${REAL_PV}"
 
 #!?ver?urllib3 >=1.5 <2.0
 
 DEPEND="dev-python/urllib3"
-RDEPEND="!dev-python/elasticsearch-py"
+RDEPEND="${DEPEND}"
 
 python_install_all() {
         distutils-r1_python_install_all

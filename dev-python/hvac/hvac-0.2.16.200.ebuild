@@ -7,16 +7,16 @@ PYTHON_COMPAT=(python{2_7,3_4})
 
 inherit distutils-r1
 
-REAL_PN="hvac"
+REAL_PV="0.2.16"
 DESCRIPTION="HashiCorp Vault API client"
 HOMEPAGE=""
-SRC_URI="https://github.com/ianunruh/hvac/archive/v${PV}.tar.gz -> ${REAL_PN}-${PV}.tar.gz"
+SRC_URI="https://github.com/ianunruh/hvac/archive/v${REAL_PV}.tar.gz -> ${PN}-${REAL_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 # IUSE="debug"
-S="${WORKDIR}/${REAL_PN}-${PV}"
+S="${WORKDIR}/${PN}-${REAL_PV}"
 
 DEPEND="
         =dev-python/requests-2.7.0.200
@@ -25,7 +25,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 python_prepare_all() {
-	epatch "${FILESDIR}"/__init__.py-${PV}.diff
+	epatch "${FILESDIR}"/__init__.py-${REAL_PV}.diff
 
 	distutils-r1_python_prepare_all
 }
