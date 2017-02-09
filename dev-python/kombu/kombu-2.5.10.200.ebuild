@@ -8,16 +8,16 @@ PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy )
 
 inherit distutils-r1
 
-REAL_PN="kombu"
+REAL_PV="2.5.10"
 DESCRIPTION="AMQP Messaging Framework for Python"
 HOMEPAGE="https://pypi.python.org/pypi/kombu https://github.com/celery/kombu"
-SRC_URI="mirror://pypi/${PN:0:1}/${REAL_PN}/${REAL_PN}-${PV}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${REAL_PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ~arm64 x86"
 IUSE="amqplib doc examples msgpack sqs test"
-S="${WORKDIR}/${REAL_PN}-${PV}"
+S="${WORKDIR}/${PN}-${REAL_PV}"
 
 # couchdb backend support possible via dev-python/couchdb-python
 # ditto dev-python/kazoo(>=1.3.1) and dev-python/beanstalkc

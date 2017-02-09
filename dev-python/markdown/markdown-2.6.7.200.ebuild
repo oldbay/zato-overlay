@@ -9,7 +9,8 @@ PYTHON_COMPAT=( python2_7 python3_{4,5} pypy pypy3 )
 inherit distutils-r1
 
 MY_PN="Markdown"
-MY_P=${MY_PN}-${PV}
+REAL_PV="2.6.7"
+MY_P=${MY_PN}-${REAL_PV}
 
 DESCRIPTION="Python implementation of the markdown markup language"
 HOMEPAGE="
