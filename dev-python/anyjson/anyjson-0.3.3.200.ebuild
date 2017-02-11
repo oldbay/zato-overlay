@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 RDEPEND="!dev-python/anyjson"
 
 python_prepare_all() {
-	epatch "${FILESDIR}"/__init__.py-${PV}.diff
+	epatch "${FILESDIR}"/__init__.py-${REAL_PV}.diff
 
 	distutils-r1_python_prepare_all
 }
