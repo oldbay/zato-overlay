@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="test"
 
-RDEPEND="<dev-python/django-1.7[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/django[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/django[sqlite] )"

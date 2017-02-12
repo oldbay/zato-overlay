@@ -22,7 +22,14 @@ SLOT="0"
 
 #list depends call: cat version-3.0-gentoo.cfg|awk '{print $NF}'|grep -v "#"
 
+DEP_DEPENDS="
+		=dev-python/oslo-utils-2.4.0.200
+		=dev-python/oslo-serialization-1.10.0.200
+		=dev-python/jsonpatch-1.5.200
+"
+
 DEPEND="
+        ${DEP_DEPENDS}
 		=dev-python/alembic-0.8.7.200
 		=dev-python/anyjson-0.3.3.200
 		=dev-python/arrow-0.4.2.200
@@ -79,6 +86,7 @@ DEPEND="
 		=dev-python/nosexcover-1.0.7.200
 		=dev-python/oauth-1.0.1.200
 		=dev-python/openerp-client-lib-1.1.2
+		=dev-python/oslo-config-1.2.1.200
 		=dev-python/ordereddict-1.1.200
 		=dev-python/outbox-0.1.8.200
 		=dev-python/paodate-1.2
@@ -155,7 +163,9 @@ DEPEND="
 		dev-python/brython
 "
 
-RDEPEND="${DEPEND}"
+RDEPEND="
+        ${DEPEND}
+"
 
 python_prepare_all() {
         #zato-cli

@@ -24,7 +24,7 @@ S="${WORKDIR}/${PN}-${REAL_PV}"
 PY27_GEN_USEDEP=$(python_gen_usedep python2_7)
 PYPY_GEN_USEDEP=$(python_gen_usedep python2_7 pypy)
 RDEPEND="
-	>=dev-python/anyjson-zato-0.3.3[${PYTHON_USEDEP}]
+	>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
 	>=dev-python/py-amqp-1.4.9[${PYTHON_USEDEP}]
 	<dev-python/py-amqp-2.0[${PYTHON_USEDEP}]
 	dev-python/pyro:4[${PYTHON_USEDEP}]

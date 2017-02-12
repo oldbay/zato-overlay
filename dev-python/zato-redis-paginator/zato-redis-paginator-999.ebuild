@@ -21,7 +21,7 @@ KEYWORDS=""
 
 DEPEND="
     >=dev-python/django-1.3.1
-	>=dev-python/redis-py-zato-2.4.13
+	>=dev-python/redis-py-2.4.13
 	"
 RDEPEND="${DEPEND}"
 

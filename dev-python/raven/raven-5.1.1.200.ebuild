@@ -21,5 +21,5 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="
-	dev-python/pytest[${PYTHON_USEDEP}]
+	dev-python/logilab-common[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]"
