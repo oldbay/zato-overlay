@@ -25,4 +25,4 @@ IUSE=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
 
-PATCHES=( "${FILESDIR}"/${P}-remove-osx-fix.patch )
+PATCHES=( "${FILESDIR}"/${PN}-${REAL_PV}-remove-osx-fix.patch )

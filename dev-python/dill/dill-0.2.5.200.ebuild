@@ -20,6 +20,6 @@ KEYWORDS="~amd64 ~x86 ~ppc ~amd64-linux ~x86-linux"
 IUSE=""
 
 PATCHES=(
-	"${FILESDIR}/${P}-avoid-installation-binaries.patch"
-	"${FILESDIR}/${P}-remove-install_requires.patch"
+	"${FILESDIR}/${PN}-${REAL_PV}-avoid-installation-binaries.patch"
+	"${FILESDIR}/${PN}-${REAL_PV}-remove-install_requires.patch"
 )

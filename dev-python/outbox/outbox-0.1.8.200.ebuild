@@ -23,7 +23,10 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 python_prepare_all() {
-	epatch "${FILESDIR}"/oauth.py-${REAL_PV}.diff
+	epatch "${FILESDIR}"/outbox.py-${REAL_PV}.diff
+	epatch "${FILESDIR}"/outbox.py2-${REAL_PV}.diff
+	epatch "${FILESDIR}"/outbox.py3-${REAL_PV}.diff
+	epatch "${FILESDIR}"/outbox.py4-${REAL_PV}.diff
 
 	distutils-r1_python_prepare_all
 }

@@ -23,7 +23,6 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	${CDEPEND}"
 RDEPEND="${CDEPEND}
 	dev-python/iso8601[${PYTHON_USEDEP}]
-	dev-python/positional[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]
 	dev-python/stevedore[${PYTHON_USEDEP}]"

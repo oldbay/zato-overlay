@@ -21,7 +21,10 @@ SLOT="0"
 KEYWORDS="amd64 ~arm64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
-CDEPEND=">=dev-python/pbr-1.3[${PYTHON_USEDEP}]"
+CDEPEND="
+         >=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
+		 <dev-python/pbr-1.0[${PYTHON_USEDEP}]
+"
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	${CDEPEND}
@@ -34,7 +37,6 @@ DEPEND="
 		>=dev-python/oslotest-1.10.0[${PYTHON_USEDEP}]
 		>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
 		>=dev-python/reno-0.1.1[${PYTHON_USEDEP}]
-		>=dev-python/oslo-i18n-2.1.0[${PYTHON_USEDEP}]
 		>=dev-python/mock-1.2[${PYTHON_USEDEP}]
 		>=dev-python/bandit-0.17.3[${PYTHON_USEDEP}]
 	)
@@ -48,11 +50,12 @@ DEPEND="
 "
 RDEPEND="
 	${CDEPEND}
-	>=dev-python/debtcollector-1.2.0[${PYTHON_USEDEP}]
+	>=dev-python/debtcollector-0.5.0[${PYTHON_USEDEP}]
 	>=dev-python/netaddr-0.7.11[${PYTHON_USEDEP}]
 	!~dev-python/netaddr-0.7.16[${PYTHON_USEDEP}]
 	>=dev-python/six-1.9.0[${PYTHON_USEDEP}]
-	>=dev-python/stevedore-1.5.0[${PYTHON_USEDEP}]
+	>=dev-python/stevedore-0.14[${PYTHON_USEDEP}]
+	>=dev-python/argparse-1.2.1[${PYTHON_USEDEP}]
 "
 
 python_prepare_all() {

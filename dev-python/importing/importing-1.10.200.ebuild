@@ -19,7 +19,7 @@ IUSE=""
 LICENSE="ZPL"
 SLOT="0"
 
-RDEPEND=""
+RDEPEND="!dev-python/peak"
 DEPEND="app-arch/unzip
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 

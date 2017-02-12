@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{2_7,3_{4,5}} )
 inherit distutils-r1 vcs-snapshot
 
 MY_PN=${PN/-/.}
-REAL_PV="1.10.0"
+REAL_PV="1.0.0"
 
 DESCRIPTION="Oslo Serialization library"
 HOMEPAGE="https://launchpad.net/oslo"
@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm64 x86"
 IUSE="doc test"
 
-CDEPEND=">=dev-python/pbr-1.8[${PYTHON_USEDEP}]"
+CDEPEND=">=dev-python/pbr-0.7[${PYTHON_USEDEP}]"
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	${CDEPEND}
@@ -29,7 +29,6 @@ DEPEND="
 		>=dev-python/mock-1.2[${PYTHON_USEDEP}]
 		>=dev-python/netaddr-0.7.12[${PYTHON_USEDEP}]
 		!~dev-python/netaddr-0.7.16[${PYTHON_USEDEP}]
-		>=dev-python/oslo-i18n-1.5.0[${PYTHON_USEDEP}]
 		>=dev-python/oslotest-1.10.0[${PYTHON_USEDEP}]
 		>=dev-python/simplejson-2.2.0[${PYTHON_USEDEP}]
 	)
@@ -43,11 +42,9 @@ DEPEND="
 RDEPEND="
 	${CDEPEND}
 	>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
-	>=dev-python/six-1.9.0[${PYTHON_USEDEP}]
-	>=dev-python/msgpack-0.4.0[${PYTHON_USEDEP}]
+	>=dev-python/six-1.7.0[${PYTHON_USEDEP}]
 	>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
-	>=dev-python/oslo-utils-2.4.0[${PYTHON_USEDEP}]
-	>=dev-python/pytz-2013.6[${PYTHON_USEDEP}]
+	>=dev-python/oslo-utils-0.3.0[${PYTHON_USEDEP}]
 "
 
 python_prepare_all() {

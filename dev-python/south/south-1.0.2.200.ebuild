@@ -26,8 +26,6 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/django[sqlite] )"
 
-PATCHES=( "${FILESDIR}"/${P}-3753b49c-Replace-dict.iteritems-with-six.patch )
-
 S="${WORKDIR}/${MY_P}"
 
 python_test() {

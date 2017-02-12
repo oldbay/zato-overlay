@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=6
-PYTHON_COMPAT=( python2_7 python{3_4,3_5} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
@@ -19,7 +19,7 @@ KEYWORDS="amd64 ~arm64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 REQUIRED_USE="test? ( doc )"
 
-CDEPEND=">=dev-python/pbr-1.6[${PYTHON_USEDEP}]"
+CDEPEND=">=dev-python/pbr-0.7[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	${CDEPEND}
 	test? (
@@ -60,7 +60,6 @@ RDEPEND="
 	<dev-python/warlock-2[${PYTHON_USEDEP}]
 	>=dev-python/six-1.9.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-utils-2.4.0[${PYTHON_USEDEP}]
-	>=dev-python/oslo-i18n-2.1.0[${PYTHON_USEDEP}]
 "
 
 python_prepare_all() {

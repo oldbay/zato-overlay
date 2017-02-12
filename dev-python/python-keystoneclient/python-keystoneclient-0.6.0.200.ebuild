@@ -22,7 +22,7 @@ IUSE=""
 #doc? ( !~dev-python/sphinx-1.3_preb1[${PYTHON_USEDEP}] )
 
 CDEPEND="
-	>=dev-python/pbr-1.6[${PYTHON_USEDEP}]"
+	>=dev-python/pbr-0.7[${PYTHON_USEDEP}]"
 TCDEPEND="
 	>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
 	>=dev-python/mock-1.0.1[${PYTHON_USEDEP}]
@@ -38,18 +38,16 @@ DEPEND="
 RDEPEND="
 	${CDEPEND}
 	>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
-	>=dev-python/debtcollector-1.2.0[${PYTHON_USEDEP}]
+	>=dev-python/debtcollector-0.5.0[${PYTHON_USEDEP}]
 	=dev-python/keystoneauth-0.5.0.200[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.2.1[${PYTHON_USEDEP}]
-	>=dev-python/oslo-i18n-2.1.0[${PYTHON_USEDEP}]
-	>=dev-python/oslo-serialization-1.10.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-serialization-1.0.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-utils-2.4.0[${PYTHON_USEDEP}]
-	>=dev-python/positional-1.0.1[${PYTHON_USEDEP}]
 	>=dev-python/prettytable-0.7[${PYTHON_USEDEP}]
 	<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
-	>=dev-python/six-1.9.0[${PYTHON_USEDEP}]
-	>=dev-python/stevedore-1.5.0[${PYTHON_USEDEP}]
+	dev-python/six[${PYTHON_USEDEP}]
+	>=dev-python/stevedore-0.14.0[${PYTHON_USEDEP}]
 "
 #PATCHES=(
 #)

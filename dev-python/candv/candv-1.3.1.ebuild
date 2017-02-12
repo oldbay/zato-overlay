@@ -22,6 +22,13 @@ DEPEND="
         "
 RDEPEND="${DEPEND}"
 
+python_prepare_all() {
+	rm -rf ${S}/tests
+
+	distutils-r1_python_prepare_all
+}
+
+
 python_install_all() {
         distutils-r1_python_install_all
 

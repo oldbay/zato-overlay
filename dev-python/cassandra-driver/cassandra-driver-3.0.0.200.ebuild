@@ -11,7 +11,7 @@ REAL_PV="3.0.0"
 DESCRIPTION="DataStax python driver for Apache Cassandra"
 HOMEPAGE="https://github.com/datastax/python-driver https://pypi.python.org/pypi/cassandra-driver/${REAL_PV}"
 SRC_URI="https://github.com/datastax/python-driver/archive/${REAL_PV}.tar.gz -> ${P}.tar.gz"
-S=${WORKDIR}/${PN}-${REAL_PV}
+# S=${WORKDIR}/${PN}-${REAL_PV}
 LICENSE="Apache-2.0"
 
 SLOT="0"

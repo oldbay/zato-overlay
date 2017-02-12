@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_4} )
 # notes wrt py-3 compatibility:
 # Debian ships paste for py3 using 2to3. Many tests fail when using such converted code and
 # the fact that the errors are sometimes nested inside paste indicate that the

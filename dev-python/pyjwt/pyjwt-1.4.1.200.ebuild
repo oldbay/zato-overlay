@@ -18,7 +18,6 @@ KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 RDEPEND="!dev-python/pyjwt"
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/logilab-common
 	"
 
 S="${WORKDIR}"/${PN}-${REAL_PV}

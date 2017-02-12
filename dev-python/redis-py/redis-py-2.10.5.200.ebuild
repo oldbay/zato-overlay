@@ -30,7 +30,7 @@ RDEPEND="!dev-python/redis-py"
 S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-py-${REAL_PV}-test-finalize.patch
+	"${FILESDIR}"/${PN}-${REAL_PV}-test-finalize.patch
 	"${FILESDIR}"/connection.py-${REAL_PV}.diff
 )
 

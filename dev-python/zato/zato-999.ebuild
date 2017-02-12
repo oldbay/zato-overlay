@@ -23,15 +23,23 @@ SLOT="0"
 #list depends call: cat version-3.0-gentoo.cfg|awk '{print $NF}'|grep -v "#"
 
 DEP_DEPENDS="
+		=dev-python/easydev-0.9.9
+		=dev-python/globre-lgpl-999
+		dev-python/numpy
+		=dev-python/dpath-1.4.0
+		sci-libs/scipy
+		dev-python/brython
 		=dev-python/oslo-utils-2.4.0.200
-		=dev-python/oslo-serialization-1.10.0.200
+		=dev-python/oslo-serialization-1.0.0.200
 		=dev-python/jsonpatch-1.5.200
+		=dev-python/debtcollector-0.5.0.200
 "
 
 DEPEND="
         ${DEP_DEPENDS}
 		=dev-python/alembic-0.8.7.200
 		=dev-python/anyjson-0.3.3.200
+		=dev-python/argparse-1.2.1.200
 		=dev-python/arrow-0.4.2.200
 		=dev-python/behave-1.2.4.200
 		=dev-python/boto-2.35.1.200
@@ -94,6 +102,7 @@ DEPEND="
 		=dev-python/parse-type-0.3.4.200
 		=dev-python/paste-1.7.5.1.200
 		=dev-python/pathtools-0.1.2.200
+		=dev-python/pbr-0.7.0.200
 		=dev-python/pesto-25
 		=dev-python/pg8000-1.10.2
 		=dev-python/pika-0.9.12.200
@@ -141,6 +150,7 @@ DEPEND="
 		=dev-python/south-1.0.2.200
 		=dev-python/springpython-1.3.0.200
 		=dev-python/sqlalchemy-0.9.9.200
+		=dev-python/stevedore-0.14.1.200
 		=dev-python/stompest-2.1.6
 		=dev-python/textblob-0.11.1
 		=dev-python/texttable-0.8.4.200
@@ -148,19 +158,13 @@ DEPEND="
 		=dev-python/tzlocal-1.3.200
 		=dev-python/umalqurra-0.2
 		=dev-python/untokenize-0.1.1
+		=dev-python/urllib3-1.10.4.200
 		=dev-python/webhelpers-1.3.200
 		=dev-python/warlock-1.1.0.200
 		=dev-python/werkzeug-0.9.4.200
 		=dev-python/wsaccel-0.6.2.200
 		=dev-python/ws4py-0.3.5.200
 		=dev-python/zato-redis-paginator-999
-		=dev-python/easydev-0.9.9
-		=dev-python/globre-lgpl-999
-		=dev-python/peak-0.5
-		dev-python/numpy
-		=dev-python/dpath-1.4.0
-		sci-libs/scipy
-		dev-python/brython
 "
 
 RDEPEND="

@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm64 x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
-CDEPEND=">=dev-python/pbr-1.6[${PYTHON_USEDEP}]"
+CDEPEND=">=dev-python/pbr-0.7[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	${CDEPEND}
 	test? (
@@ -47,8 +47,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 RDEPEND="
 	=dev-python/keystoneauth-0.5.0.200[${PYTHON_USEDEP}]
 	>=dev-python/iso8601-0.1.9[${PYTHON_USEDEP}]
-	>=dev-python/oslo-i18n-2.1.0[${PYTHON_USEDEP}]
-	>=dev-python/oslo-serialization-1.10.0[${PYTHON_USEDEP}]
+	>=dev-python/oslo-serialization-1.0.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-utils-2.4.0[${PYTHON_USEDEP}]
 	>=dev-python/prettytable-0.7[${PYTHON_USEDEP}]
 	<dev-python/prettytable-0.8[${PYTHON_USEDEP}]
