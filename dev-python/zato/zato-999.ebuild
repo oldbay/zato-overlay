@@ -81,7 +81,7 @@ DEPEND="
 		=dev-python/jdatetime-1.8.1
 		=dev-python/jsonpointer-1.3.200
 		=dev-python/jsonschema-2.3.0.200
-		=dev-python/kombu-2.5.10.200
+		=dev-python/kombu-3.0.34.200
 		=dev-python/lxml-3.3.5.200
 		=dev-python/markdown-2.6.7.200
 		=dev-python/mccabe-0.2.1.200
@@ -164,6 +164,7 @@ DEPEND="
 		=dev-python/werkzeug-0.9.4.200
 		=dev-python/wsaccel-0.6.2.200
 		=dev-python/ws4py-0.3.5.200
+		=dev-python/wsgiref-0.1.2.200
 		=dev-python/zato-redis-paginator-999
 "
 
