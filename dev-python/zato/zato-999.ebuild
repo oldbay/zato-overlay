@@ -8,9 +8,10 @@ PYTHON_COMPAT=( python2_7 )
 EGIT_REPO_URI="https://github.com/zatosource/zato.git"
 EGIT_PROJECT="zato-${PV}"
 EGIT_BRANCH="main"
-# EGIT_COMMIT="758e4ab92282af1d1a01c0af024d5ccfd3eac02f"
-# EGIT_COMMIT="51cf2261224a49d98b3f958d9a4ac422c4211a16"
-EGIT_COMMIT="48b6ce95d087f85725c2cd339f5c6f196eee5c63"
+# EGIT_COMMIT="758e4ab"
+# EGIT_COMMIT="51cf226"
+# EGIT_COMMIT="48b6ce9"
+EGIT_COMMIT="194902d"
 
 
 inherit distutils-r1 git-2
@@ -50,8 +51,6 @@ DEPEND="
 		=dev-python/concurrent-log-handler-0.9.1
 		=dev-python/configobj-5.0.5.200
 		=dev-python/convertdate-2.0.3.1
-		=dev-python/cov-core-1.7.0.200
-		=dev-python/coverage-3.7.1.200
 		=dev-python/parse-crontab-0.20
 		=dev-python/cryptography-1.7.2.200
 		=dev-python/dateparser-0.5.1
@@ -121,7 +120,7 @@ DEPEND="
 		=dev-python/pyopenssl-0.15.1.200
 		=dev-python/pyparsing-2.1.10.200
 		=dev-python/pyprof2calltree-1.1.0.200
-		=dev-python/pyrapidjson-0.4.2
+		=dev-python/pyrapidjson-0.5
 		=dev-python/pysolr-3.2.0.200
 		=dev-python/python-butler-0.9.200
 		=dev-python/python-dateutil-2.6.0.200
@@ -166,6 +165,7 @@ DEPEND="
 		=dev-python/ws4py-0.3.5.200
 		=dev-python/wsgiref-0.1.2.200
 		=dev-python/zato-redis-paginator-999
+		=dev-python/zato-vault-client-999
 "
 
 RDEPEND="

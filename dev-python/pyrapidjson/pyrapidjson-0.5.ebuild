@@ -17,7 +17,7 @@ KEYWORDS=""
 # IUSE="debug"
 S="${WORKDIR}/${PN}-ver${PV}"
 
-DEPEND=""
+DEPEND="dev-libs/rapidjson"
 RDEPEND="${DEPEND}"
 
 python_install_all() {
