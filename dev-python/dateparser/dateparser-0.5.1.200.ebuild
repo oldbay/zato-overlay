@@ -7,15 +7,15 @@ PYTHON_COMPAT=(python{2_7,3_4})
 
 inherit distutils-r1
 
+REAL_PV="0.5.1"
 DESCRIPTION="Date parsing library designed to parse dates from HTML pages"
 HOMEPAGE=""
-SRC_URI="https://github.com/scrapinghub/dateparser/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/scrapinghub/${PN}/archive/v${REAL_PV}.tar.gz -> ${PN}-${REAL_PV}.tar.gz"
+S="${WORKDIR}/${PN}-${REAL_PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-# IUSE="debug"
-# S="${WORKDIR}/${PN}-${PV}"
 
 DEPEND="
         >=dev-python/convertdate-2.0.3.1

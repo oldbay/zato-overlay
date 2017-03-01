@@ -7,9 +7,11 @@ PYTHON_COMPAT=(python{2_7,3_4})
 
 inherit distutils-r1
 
+REAL_PV="0.9.1"
 DESCRIPTION="Concurrent logging handler (drop-in replacement for RotatingFileHandler)"
 HOMEPAGE=""
-SRC_URI="https://launchpad.net/python-concurrent-log-handler/trunk/${PV}/+download/ConcurrentLogHandler-${PV}.tar.gz"
+SRC_URI="https://launchpad.net/python-concurrent-log-handler/trunk/${REAL_PV}/+download/ConcurrentLogHandler-${REAL_PV}.tar.gz"
+S=${WORKDIR}/${PN}-${REAL_PV}
 
 LICENSE="Apache"
 SLOT="0"

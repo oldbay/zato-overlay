@@ -3,13 +3,14 @@ EAPI=5
 
 PYTHON_COMPAT=( python{2_7,3_4} )
 
-EGIT_REPO_URI="https://github.com/josiahcarlson/parse-crontab"
-# EGIT_PROJECT=""
-# EGIT_COMMIT=
+REAL_PN="crontab"
+REAL_PV="0.20"
+SRC_URI="mirror://pypi/${REAL_PN:0:1}/${REAL_PN}/${REAL_PN}-${REAL_PV}.tar.gz"
+S=${WORKDIR}/${REAL_PN}-${REAL_PV}
 
 # PYTHON_DEPEND="2"
 
-inherit distutils git-2
+inherit distutils
 
 DESCRIPTION="Python crontab parser"
 HOMEPAGE=""
