@@ -10,7 +10,7 @@ inherit distutils-r1
 REAL_PV="0.1.8"
 DESCRIPTION="ZATO-3 patch. SMTP client for Humans."
 HOMEPAGE=""
-SRC_URI="https://pypi.python.org/packages/source/o/${PN}/${PN}-${REAL_PV}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${REAL_PV}.tar.gz"
 S=${WORKDIR}/${PN}-${REAL_PV}
 
 LICENSE="GPL-2"

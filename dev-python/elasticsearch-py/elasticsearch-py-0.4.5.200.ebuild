@@ -11,15 +11,12 @@ DOWN_PN="elasticsearch"
 REAL_PV="0.4.5"
 DESCRIPTION="Python client for Elasticsearch"
 HOMEPAGE=""
-SRC_URI="https://pypi.python.org/packages/source/e/${DOWN_PN}/${DOWN_PN}-${REAL_PV}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${DOWN_PN}/${DOWN_PN}-${REAL_PV}.tar.gz"
+S="${WORKDIR}/${DOWN_PN}-${REAL_PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-# IUSE="debug"
-S="${WORKDIR}/${DOWN_PN}-${REAL_PV}"
-
-#!?ver?urllib3 >=1.5 <2.0
 
 DEPEND="dev-python/urllib3"
 RDEPEND="${DEPEND}"

@@ -22,6 +22,6 @@ IUSE="test"
 RDEPEND=""
 DEPEND="
         dev-python/setuptools[${PYTHON_USEDEP}]
-		dev-python/zc-buildout
+        dev-python/zc-buildout
         dev-python/zc-recipe-egg
 "

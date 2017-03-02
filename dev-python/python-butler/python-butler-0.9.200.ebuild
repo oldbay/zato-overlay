@@ -10,12 +10,12 @@ inherit distutils-r1
 REAL_PV="0.9"
 DESCRIPTION="ZATO-3 patch. Python Dictionaries and Lists on Steroids"
 HOMEPAGE=""
-SRC_URI="https://pypi.python.org/packages/source/p/${PN}/${PN}-${REAL_PV}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${REAL_PV}.tar.gz"
+S="${WORKDIR}/${PN}-${REAL_PV}"
 
 LICENSE="LGPL"
 SLOT="0"
 KEYWORDS=""
-S="${WORKDIR}/${PN}-${REAL_PV}"
 
 DEPEND=""
 RDEPEND=""
