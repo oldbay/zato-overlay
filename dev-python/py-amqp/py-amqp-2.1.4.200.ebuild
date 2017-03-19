@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy )
 inherit distutils-r1
 
 MY_PN="amqp"
-REAL_PV="1.4.9"
+REAL_PV="2.1.4"
 MY_P="${MY_PN}-${REAL_PV}"
 
 DESCRIPTION="Low-level AMQP client for Python (fork of amqplib)"
@@ -37,9 +37,6 @@ DEPEND="
 		dev-python/mock[${PYTHON_USEDEP}]
 	)
 "
-
-# Same tests from before require a socket connection
-PATCHES=( "${FILESDIR}"/${PN}-1.3.3-disable_socket_tests.patch )
 
 python_compile_all() {
 	use doc && emake -C docs html

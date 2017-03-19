@@ -8,8 +8,10 @@ PYTHON_COMPAT=( python2_7 )
 EGIT_REPO_URI="https://github.com/zatosource/zato.git"
 EGIT_PROJECT="zato-${PV}"
 EGIT_BRANCH="main"
-# EGIT_COMMIT="194902d"
+# old work
 EGIT_COMMIT="76ed3a2"
+# new bad
+#EGIT_COMMIT="990f98f"
 
 
 inherit distutils-r1 git-2
@@ -36,15 +38,14 @@ DEP_DEPENDS="
 
 DEPEND="
         ${DEP_DEPENDS}
-        =dev-python/alembic-0.8.7.200
-		=dev-python/py-amqp-1.4.9.200
+		=dev-python/alembic-0.8.7.200
+		=dev-python/py-amqp-2.1.4.200
 		=dev-python/anyjson-0.3.3.200
 		=dev-python/argh-0.26.1.200
 		=dev-python/argparse-1.2.1.200
 		=dev-python/arrow-0.4.2.200
 		dev-python/Babel
 		=dev-python/behave-1.2.4.200
-		=dev-python/blist-1.3.6.200
 		=dev-python/boto-2.35.1.200
 		=dev-python/bunch-1.0.1.200
 		=dev-vcs/bzr-2.6.0.200
@@ -59,6 +60,7 @@ DEPEND="
 		=dev-python/convertdate-2.0.3.1.200
 		=dev-python/parse-crontab-0.20.200
 		=dev-python/cryptography-1.7.2.200
+		=dev-python/cytoolz-0.8.2.200
 		=dev-python/dateparser-0.5.1.200
 		=dev-python/decorator-4.0.2.200
 		=dev-python/dictalchemy-0.1.2.6.200
@@ -97,8 +99,9 @@ DEPEND="
 		=dev-python/jsonpointer-1.3.200
 		=dev-python/jsonschema-2.3.0.200
 		=dev-python/keyring-3.7.200
-		=dev-python/kombu-3.0.34.200
-		=dev-python/lxml-3.3.5.200
+		=dev-python/kombu-4.0.2.200
+		=dev-python/librabbitmq-1.6.1.200
+		=dev-python/lxml-3.7.3.200
 		=dev-python/mako-1.0.0.200
 		=dev-python/markdown-2.6.7.200
 		=dev-python/markupsafe-0.23.200
@@ -124,7 +127,6 @@ DEPEND="
 		dev-python/pep8
 		=dev-python/pesto-25.200
 		=dev-python/pg8000-1.10.2.200
-		=dev-python/pika-0.9.12.200
 		dev-python/pip
 		=dev-python/portalocker-0.5.7.200
 		=dev-python/prettytable-0.7.2.200
@@ -141,7 +143,7 @@ DEPEND="
 		=dev-python/pypubsub-3.3.0.200
 		=dev-python/pygments-1.5.200
 		=dev-python/pyopenssl-0.15.1.200
-		=dev-python/pyparsing-2.1.10.200
+		=dev-python/pyparsing-2.2.0.200
 		=dev-python/pyprof2calltree-1.1.0.200
 		=dev-python/pyrapidjson-0.5.200
 		=dev-python/pysolr-3.2.0.200
@@ -183,11 +185,13 @@ DEPEND="
 		=dev-python/textblob-0.11.1.200
 		=dev-python/texttable-0.8.4.200
 		=dev-python/threadpool-1.2.7.200
+		=dev-python/toolz-0.8.2.200
 		=dev-python/typing-3.5.3.0.200
 		=dev-python/tzlocal-1.3.200
 		=dev-python/umalqurra-0.2.200
 		=dev-python/untokenize-0.1.1.200
 		=dev-python/urllib3-1.10.4.200
+		=dev-python/vine-1.1.3.200
 		=dev-python/webhelpers-1.3.200
 		=dev-python/warlock-1.1.0.200
 		=dev-python/watchdog-0.8.1.200

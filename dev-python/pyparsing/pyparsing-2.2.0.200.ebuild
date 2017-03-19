@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python2_7 python3_{4,5} pypy pypy3 )
 
 inherit distutils-r1
 
-REAL_PV="2.1.10"
+REAL_PV="2.2.0"
 DESCRIPTION="Easy-to-use Python module for text parsing"
 HOMEPAGE="http://pyparsing.wikispaces.com/ https://pypi.python.org/pypi/pyparsing"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${REAL_PV}.tar.gz"

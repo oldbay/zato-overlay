@@ -5,4 +5,4 @@ Zato - Open Source ESB, SOA, REST, APIs and Cloud Integrations in Python (https:
 
 DEPENDS
 List actual depends for zato ebuild & package.keywords:
-cat version-gentoo-3.0-194902d.cfg |awk '{print $NF}'|grep -v "#"
+cat version-gentoo-3.0.cfg |awk '{print $NF}'|grep -v "#"

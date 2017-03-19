@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_7,3_4,3_5} pypy )
 
 inherit distutils-r1
 
-REAL_PV="3.0.34"
+REAL_PV="4.0.2"
 DESCRIPTION="AMQP Messaging Framework for Python"
 HOMEPAGE="https://pypi.python.org/pypi/kombu https://github.com/celery/kombu"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${REAL_PV}.tar.gz"
@@ -25,8 +25,8 @@ PY27_GEN_USEDEP=$(python_gen_usedep python2_7)
 PYPY_GEN_USEDEP=$(python_gen_usedep python2_7 pypy)
 RDEPEND="
 	>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-	>=dev-python/py-amqp-1.4.9[${PYTHON_USEDEP}]
-	<dev-python/py-amqp-2.0[${PYTHON_USEDEP}]
+	>=dev-python/py-amqp-2.1.4[${PYTHON_USEDEP}]
+	<dev-python/py-amqp-3.0[${PYTHON_USEDEP}]
 	dev-python/pyro:4[${PYTHON_USEDEP}]
 	$(python_gen_cond_dep '>=dev-python/pyzmq-13.1.0[${PYTHON_USEDEP}]' 'python*')
 	amqplib? ( >=dev-python/amqplib-1.0.2[${PYTHON_USEDEP}] )
@@ -62,10 +62,6 @@ PY27_REQUSE="$(python_gen_useflags 'python2*')"
 REQUIRED_USE="
 	sqs? ( ${PY27_REQUSE} )
 	doc? ( ${PY27_REQUSE} amqplib sqs )"	# 2 deps in doc build are py2 capable only
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-NA-tests-fix.patch
-	)
 
 pkg_setup() {
 	use doc && DISTUTILS_ALL_SUBPHASE_IMPLS=( python2.7 )
